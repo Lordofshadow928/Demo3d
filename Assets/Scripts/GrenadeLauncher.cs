@@ -26,7 +26,7 @@ public class GrenadeLauncher : MonoBehaviour
     public void AddProjectile()
     {
         GameObject bullet = Instantiate(bulletPrefab, firingPos.position, firingPos.rotation);
-        Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        rb.velocity = firingPos.forward * bulletSpeed;
+        bullet.GetComponent<Rigidbody>().velocity = firingPos.forward * bulletSpeed; 
+        
 	}
 }
