@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GunAmmo : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GunAmmo : MonoBehaviour
 	public GrenadeLauncher gun;
 	public Animator anim;
 	public AudioSource reloadSounds;
+	public UnityEvent loadAmmoChanged;
 
 	private int _loadedAmmo;
 	public int LoadedAmmo
@@ -16,6 +18,7 @@ public class GunAmmo : MonoBehaviour
 		set
 		{
 			_loadedAmmo = value;
+			loadAmmoChanged.Invoke();
 			if (_loadedAmmo <= 0)
 			{
 				LockShooting();
