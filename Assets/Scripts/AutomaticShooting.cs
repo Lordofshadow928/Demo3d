@@ -26,6 +26,7 @@ public class AutomaticShooting : MonoBehaviour
         if(Input.GetMouseButton(0))
         {
             UpdateFiring();
+            
         }
     }
 
@@ -41,7 +42,7 @@ public class AutomaticShooting : MonoBehaviour
     private void Shoot()
     {
         shootSound.Play();
-        anim.SetTrigger("AutoShoot");
+        anim.SetTrigger("Shoot");
         PerformRayCasting();
         onShoot.Invoke();
     }

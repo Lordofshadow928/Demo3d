@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2082286146339339270}
   - component: {fileID: 9013560508337818574}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShootingSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7470216948130388139}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FiringPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,13 +152,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7722178213822400279}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.03913322, y: 0.49823388, z: -0.0000003799796, w: 0.8661592}
-  m_LocalPosition: {x: 2.99, y: 0.06, z: 0.4}
+  m_LocalRotation: {x: 0.48002508, y: 0.51920706, z: 0.51920706, w: 0.48002508}
+  m_LocalPosition: {x: 1.8620002, y: -0.029000357, z: 0.39999938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5314003213449212722}
-  m_LocalEulerAnglesHint: {x: -3.887, y: 59.893, z: -2.24}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5635578433058755801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -207,9 +207,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -94.491
       objectReference: {fileID: 0}
+    - target: {fileID: -6082924785034762767, guid: 4311dac403f1e004db14392e31c92415, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -6082924785034762767, guid: 4311dac403f1e004db14392e31c92415, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4311dac403f1e004db14392e31c92415, type: 3}
       propertyPath: m_Name
       value: Rocket_Launcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4311dac403f1e004db14392e31c92415, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -230,6 +242,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4311dac403f1e004db14392e31c92415, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5581777011811650683}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4311dac403f1e004db14392e31c92415, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3379335681955262092}
   m_SourcePrefab: {fileID: 100100000, guid: 4311dac403f1e004db14392e31c92415, type: 3}
 --- !u!1 &4824746529973397896 stripped
 GameObject:
@@ -293,6 +308,20 @@ MonoBehaviour:
   loadAmmoChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3379335681955262092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824746529973397896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9db60befd1b32e746aec4a6bd4a1dbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadedAmmoText: {fileID: 0}
+  gunAmmo: {fileID: 5581777011811650683}
 --- !u!4 &5314003213449212722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4311dac403f1e004db14392e31c92415, type: 3}
