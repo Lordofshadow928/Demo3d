@@ -73,4 +73,14 @@ public class GunAmmo : MonoBehaviour
 	{
 		LoadedAmmo = ammoCount;
 	}
+
+	public void OnGunSelected()
+	{
+		UpdateShootingLock();
+	}
+
+	private void UpdateShootingLock()
+	{
+		shooting.enabled = _loadedAmmo > 0;
+    }
 }

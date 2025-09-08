@@ -162,6 +162,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8804256080008270869, guid: e982a93a21911c94bb5499e1c0aee901, type: 3}
   m_PrefabInstance: {fileID: 142127459494170684}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &189306217 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4824746529973397896, guid: 82632850ab35aaf48a5870871268eb43, type: 3}
+  m_PrefabInstance: {fileID: 2610283850875182653}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &368735153 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5829668804154733486, guid: 19eac76399251da408bf58eea600d056, type: 3}
@@ -206,6 +211,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4366328600751696169, guid: 688c3287e66a1c64f81b0e772453e323, type: 3}
   m_PrefabInstance: {fileID: 1062255643805398132}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &567553648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3320869556789868118, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
+  m_PrefabInstance: {fileID: 1368849893}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &631495349
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 18.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083082719392894691, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: m_Name
+      value: Zombie1 Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +395,7 @@ GameObject:
   - component: {fileID: 764572938}
   - component: {fileID: 764572937}
   - component: {fileID: 764572936}
+  - component: {fileID: 764572944}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -495,6 +575,21 @@ Transform:
   - {fileID: 12858662}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &764572944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764572935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9850893a1eaf63846ab8af612fac4e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guns:
+  - {fileID: 189306217}
+  - {fileID: 567553648}
 --- !u!4 &816218616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5314003213449212722, guid: 82632850ab35aaf48a5870871268eb43, type: 3}
@@ -694,34 +789,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RP9
       objectReference: {fileID: 0}
-    - target: {fileID: 7374301024152099289, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
-      propertyPath: loadAmmoChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7374301024152099289, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
-      propertyPath: loadAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7374301024152099289, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
-      propertyPath: loadAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1368849902}
-    - target: {fileID: 7374301024152099289, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
-      propertyPath: loadAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7374301024152099289, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
-      propertyPath: loadAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateGunAmmo
-      objectReference: {fileID: 0}
-    - target: {fileID: 7374301024152099289, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
-      propertyPath: loadAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AmmoTextBinder, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7374301024152099289, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
-      propertyPath: loadAmmoChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -732,17 +799,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1751126871196075077, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
   m_PrefabInstance: {fileID: 1368849893}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1368849902 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4458177608814750259, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
-  m_PrefabInstance: {fileID: 1368849893}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db60befd1b32e746aec4a6bd4a1dbd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1564474863
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,10 +1165,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket_Launcher
       objectReference: {fileID: 0}
-    - target: {fileID: 4824746529973397896, guid: 82632850ab35aaf48a5870871268eb43, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5314003213449212722, guid: 82632850ab35aaf48a5870871268eb43, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.8
@@ -1338,3 +1390,4 @@ SceneRoots:
   - {fileID: 447916469}
   - {fileID: 2109657594}
   - {fileID: 1564474866}
+  - {fileID: 631495349}
