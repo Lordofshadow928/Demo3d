@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MuzzleFlash : MonoBehaviour
 {
-    public ParticleSystem muzzleFlashEffect;
     public Transform muzzleEffect;
     public float duration;
 

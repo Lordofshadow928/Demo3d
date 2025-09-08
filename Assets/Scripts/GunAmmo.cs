@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class GunAmmo : MonoBehaviour
 {
 	public int ammoCount;
-	public GrenadeLauncher gun;
+	public Shooting shooting;
 	public Animator anim;
 	public AudioSource reloadSounds;
 	public UnityEvent loadAmmoChanged;
@@ -42,12 +42,12 @@ public class GunAmmo : MonoBehaviour
 
 	private void LockShooting()
 	{
-		gun.enabled = false;
+		shooting.enabled = false;
 	}
 
 	private void UnlockShooting()
 	{
-		gun.enabled = true;
+		shooting.enabled = true;
 	}
 
 	private void Update()

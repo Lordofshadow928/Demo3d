@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrenadeLauncher : MonoBehaviour
+public class GrenadeLauncher : Shooting
 {
     private const int leftMouseButton = 0;
     public GameObject bulletPrefab;
