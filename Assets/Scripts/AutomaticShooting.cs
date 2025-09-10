@@ -12,8 +12,9 @@ public class AutomaticShooting : Shooting
     public Camera aimingCamera;
     public LayerMask layerMask;
     public UnityEvent onShoot; 
+    public int damage;
 
-    private float lastShot;
+	private float lastShot;
     private float interval;
 
     private void Start()
@@ -56,4 +57,13 @@ public class AutomaticShooting : Shooting
             Instantiate(hitMarkerPrefab, hitInfo.point, effectRotation);
         }
     }
+
+    private void DealDamage(RaycastHit hitInfo)
+    {
+        Health targetHealth = hitInfo.collider.GetComponent<Health>();
+        if (targetHealth != null)
+        {
+            targetHealth.TakeDamage(damage);
+        }
+	}
 }
