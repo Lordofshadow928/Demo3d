@@ -8,13 +8,13 @@ public class AutomaticShooting : Shooting
     public Animator anim;
     public int rpm;
     public AudioSource shootSound;
-    public GameObject hitMarkerPrefab;
-    public Camera aimingCamera;
-    public LayerMask layerMask;
-    public UnityEvent onShoot; 
-    public int damage;
+    //public GameObject hitMarkerPrefab;
+    //public Camera aimingCamera;
+    //public LayerMask layerMask;
+    //public int damage;
+    public UnityEvent onShoot;
 
-	private float lastShot;
+    private float lastShot;
     private float interval;
 
     private void Start()
@@ -44,26 +44,26 @@ public class AutomaticShooting : Shooting
     {
         shootSound.Play();
         anim.SetTrigger("Shoot");
-        PerformRayCasting();
+        //PerformRayCasting();
         onShoot.Invoke();
     }
 
-    private void PerformRayCasting()
-    {
-        Ray aimingRay = new Ray(aimingCamera.transform.position, aimingCamera.transform.forward);
-        if(Physics.Raycast(aimingRay, out RaycastHit hitInfo, 1000f, layerMask))
-        {
-            Quaternion effectRotation = Quaternion.LookRotation(hitInfo.normal);
-            Instantiate(hitMarkerPrefab, hitInfo.point, effectRotation);
-        }
-    }
+ //   private void PerformRayCasting()
+ //   {
+ //       Ray aimingRay = new Ray(aimingCamera.transform.position, aimingCamera.transform.forward);
+ //       if(Physics.Raycast(aimingRay, out RaycastHit hitInfo, 1000f, layerMask))
+ //       {
+ //           Quaternion effectRotation = Quaternion.LookRotation(hitInfo.normal);
+ //           Instantiate(hitMarkerPrefab, hitInfo.point, effectRotation);
+ //       }
+ //   }
 
-    private void DealDamage(RaycastHit hitInfo)
-    {
-        Health targetHealth = hitInfo.collider.GetComponent<Health>();
-        if (targetHealth != null)
-        {
-            targetHealth.TakeDamage(damage);
-        }
-	}
+ //   private void DealDamage(RaycastHit hitInfo)
+ //   {
+ //       Health targetHealth = hitInfo.collider.GetComponent<Health>();
+ //       if (targetHealth != null)
+ //       {
+ //           targetHealth.TakeDamage(damage);
+ //       }
+	//}
 }

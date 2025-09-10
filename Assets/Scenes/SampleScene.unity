@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -197,7 +197,7 @@ Transform:
   m_GameObject: {fileID: 447916468}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.3290386, y: 16.83554, z: -8.662994}
+  m_LocalPosition: {x: 10.3, y: 0, z: 5.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -230,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
       propertyPath: m_LocalPosition.z
@@ -556,7 +556,7 @@ Transform:
   m_GameObject: {fileID: 764572935}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.92, y: 20.1, z: -21.330723}
+  m_LocalPosition: {x: 13.92, y: 0.7, z: -15.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -729,10 +729,6 @@ PrefabInstance:
       propertyPath: shootSound
       value: 
       objectReference: {fileID: 1664808395166466346}
-    - target: {fileID: 1484642034523987317, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
-      propertyPath: aimingCamera
-      value: 
-      objectReference: {fileID: 963194227}
     - target: {fileID: 1751126871196075077, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.7159996
@@ -773,9 +769,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1793451867148600401, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
+      propertyPath: aimingCamera
+      value: 
+      objectReference: {fileID: 963194227}
     - target: {fileID: 3320869556789868118, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
       propertyPath: m_Name
       value: RP9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320869556789868118, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -989,7 +993,7 @@ Transform:
   m_GameObject: {fileID: 2109657590}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.32, y: 22.57, z: 2.59}
+  m_LocalPosition: {x: 10.32, y: 4.9, z: 2.59}
   m_LocalScale: {x: 9, y: 9, z: 9}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1192,6 +1196,10 @@ PrefabInstance:
     - target: {fileID: 5314003213449212722, guid: 82632850ab35aaf48a5870871268eb43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -94.491
+      objectReference: {fileID: 0}
+    - target: {fileID: 5581777011811650683, guid: 82632850ab35aaf48a5870871268eb43, type: 3}
+      propertyPath: loadAmmoChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

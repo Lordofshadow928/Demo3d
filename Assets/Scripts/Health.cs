@@ -27,7 +27,7 @@ public class Health : MonoBehaviour
     private void Die()
     {
         anim.SetTrigger("Die");
-        GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
+        //GetComponent<Collider2D>().enabled = false;
+        //this.enabled = false;
 	}
 }
