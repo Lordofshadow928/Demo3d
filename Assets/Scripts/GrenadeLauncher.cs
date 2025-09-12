@@ -10,23 +10,34 @@ public class GrenadeLauncher : Shooting
     public float bulletSpeed;
     public AudioSource shootingSound;
     public Animator anim;
+    public GunAmmo gunAmmo;
 
     void Update()
     {
         if (Input.GetMouseButtonDown(leftMouseButton))
         {
+            Debug.Log("Bullet Fired");
             ShootBullet();
         }
 	}
 
-    private void ShootBullet() => anim.SetTrigger("Shoot");
+    private void ShootBullet()
+    {
+        Debug.Log("ShootBullet method called");
+        anim.SetTrigger("Shoot");
+    }
 
-    public void PlayFireSound() => shootingSound.Play();
+    public void PlayFireSound()
+    {
+        Debug.Log("PlayFireSound method called");
+        shootingSound.Play();
+    }
 
     public void AddProjectile()
     {
+        Debug.Log("AddProjectile method called");
         GameObject bullet = Instantiate(bulletPrefab, firingPos.position, firingPos.rotation);
-        bullet.GetComponent<Rigidbody>().velocity = firingPos.forward * bulletSpeed; 
-        
+        bullet.GetComponent<Rigidbody>().velocity = firingPos.forward * bulletSpeed;
+        gunAmmo.SingleFireAmmoCounter();
 	}
 }

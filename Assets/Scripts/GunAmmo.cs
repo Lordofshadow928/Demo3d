@@ -10,8 +10,8 @@ public class GunAmmo : MonoBehaviour
 	public Animator anim;
 	public AudioSource reloadSounds;
 	public UnityEvent loadAmmoChanged;
-
-	private int _loadedAmmo;
+	[SerializeField]
+    private int _loadedAmmo;
 	public int LoadedAmmo
 	{
 		get => _loadedAmmo;
@@ -21,7 +21,7 @@ public class GunAmmo : MonoBehaviour
 			loadAmmoChanged.Invoke();
 			if (_loadedAmmo <= 0)
 			{
-				LockShooting();
+				Reload();
 			}
 			else
 			{
@@ -56,7 +56,7 @@ public class GunAmmo : MonoBehaviour
 		{
 			Reload();
 		}
-	}
+    }
 
 	private void Reload()
 	{
