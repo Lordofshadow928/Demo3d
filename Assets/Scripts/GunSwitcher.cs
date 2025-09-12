@@ -10,7 +10,7 @@ public class GunSwitcher : MonoBehaviour
     {
         for (int i = 0; i < guns.Length; i++)
         {
-            if (Input.GetKeyDown(KeyCode.Keypad1 + i))
+            if (Input.GetKeyDown(KeyCode.Keypad1 + i) || Input.GetKeyDown(KeyCode.Alpha1 + i))
             {
                 SetActiveGun(i);
             }

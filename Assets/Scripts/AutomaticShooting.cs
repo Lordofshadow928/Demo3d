@@ -7,12 +7,9 @@ public class AutomaticShooting : Shooting
 {
     public Animator anim;
     public int rpm;
-    public AudioSource shootSound;
-    //public GameObject hitMarkerPrefab;
-    //public Camera aimingCamera;
-    //public LayerMask layerMask;
-    //public int damage;
+    //public AudioSource shootSound;
     public UnityEvent onShoot;
+    public GunAmmo gunAmmo;
 
     private float lastShot;
     private float interval;
@@ -26,8 +23,9 @@ public class AutomaticShooting : Shooting
     {
         if(Input.GetMouseButton(0))
         {
+            Debug.Log("Automatic Shooting");
             UpdateFiring();
-            
+            gunAmmo.SingleFireAmmoCounter();
         }
     }
 
@@ -42,28 +40,9 @@ public class AutomaticShooting : Shooting
 
     private void Shoot()
     {
-        shootSound.Play();
+        //shootSound.Play();
         anim.SetTrigger("Shoot");
-        //PerformRayCasting();
         onShoot.Invoke();
     }
 
- //   private void PerformRayCasting()
- //   {
- //       Ray aimingRay = new Ray(aimingCamera.transform.position, aimingCamera.transform.forward);
- //       if(Physics.Raycast(aimingRay, out RaycastHit hitInfo, 1000f, layerMask))
- //       {
- //           Quaternion effectRotation = Quaternion.LookRotation(hitInfo.normal);
- //           Instantiate(hitMarkerPrefab, hitInfo.point, effectRotation);
- //       }
- //   }
-
- //   private void DealDamage(RaycastHit hitInfo)
- //   {
- //       Health targetHealth = hitInfo.collider.GetComponent<Health>();
- //       if (targetHealth != null)
- //       {
- //           targetHealth.TakeDamage(damage);
- //       }
-	//}
 }

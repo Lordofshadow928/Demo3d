@@ -773,6 +773,10 @@ PrefabInstance:
       propertyPath: aimingCamera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 1793451867148600401, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: 3320869556789868118, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
       propertyPath: m_Name
       value: RP9
@@ -1007,7 +1011,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109657590}
   serializedVersion: 4
-  m_Mass: 3
+  m_Mass: 6
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1156,6 +1160,10 @@ PrefabInstance:
     - target: {fileID: 4824746529973397896, guid: 82632850ab35aaf48a5870871268eb43, type: 3}
       propertyPath: m_Name
       value: Rocket_Launcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 4824746529973397896, guid: 82632850ab35aaf48a5870871268eb43, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5314003213449212722, guid: 82632850ab35aaf48a5870871268eb43, type: 3}
       propertyPath: m_LocalPosition.x
