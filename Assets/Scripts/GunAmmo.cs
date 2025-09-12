@@ -55,7 +55,7 @@ public class GunAmmo : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.R))
 		{
 			Reload();
-		}
+        }
     }
 
 	private void Reload()
