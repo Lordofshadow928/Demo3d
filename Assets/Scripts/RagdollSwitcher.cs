@@ -37,14 +37,14 @@ public class RagdollSwitcher : MonoBehaviour
 
     [ContextMenu("Enable Ragdoll")]
 
-    private void EnableRagdoll()
+    public void EnableRagdoll()
     {
         SetRagDoll(true);
     }
 
     [ContextMenu("Disable Ragdoll")]
 
-    private void DisableRagdoll()
+    public void DisableRagdoll()
     {
         SetRagDoll(false);
     }

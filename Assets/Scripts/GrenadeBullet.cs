@@ -9,7 +9,8 @@ public class GrenadeBullet : MonoBehaviour
 	public float explosionForce;
 	public int damage;
 
-	private void OnCollisionEnter(Collision collision)
+	private List<Health> oldVictims = new List<Health>();
+    private void OnCollisionEnter(Collision collision)
 	{
 		Instantiate(explosionPrefab, transform.position, transform.rotation);
 		Destroy(gameObject);
@@ -18,7 +19,8 @@ public class GrenadeBullet : MonoBehaviour
 
 	private void BlowObject()
 	{
-		Collider[] affectedObjects = Physics.OverlapSphere(transform.position, explosionRadius);
+		oldVictims.Clear();
+        Collider[] affectedObjects = Physics.OverlapSphere(transform.position, explosionRadius);
 		for(int i = 0; i < affectedObjects.Length; i++)
 		{
 			DealDamage(affectedObjects[i]);
@@ -28,10 +30,11 @@ public class GrenadeBullet : MonoBehaviour
 
 	private void DealDamage(Collider victim)
 	{
-		Health health = victim.GetComponent<Health>();
-		if(health != null)
+		Health health = victim.GetComponentInParent<Health>();
+		if(health != null && !oldVictims.Contains(health))
 		{
 			health.TakeDamage(damage);
+			oldVictims.Add(health);
         }
     }
 
