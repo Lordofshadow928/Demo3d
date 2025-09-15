@@ -7,6 +7,7 @@ public class GrenadeBullet : MonoBehaviour
 	public GameObject explosionPrefab;
 	public float explosionRadius;
 	public float explosionForce;
+	public int damage;
 
 	private void OnCollisionEnter(Collision collision)
 	{
@@ -20,11 +21,26 @@ public class GrenadeBullet : MonoBehaviour
 		Collider[] affectedObjects = Physics.OverlapSphere(transform.position, explosionRadius);
 		for(int i = 0; i < affectedObjects.Length; i++)
 		{
-			Rigidbody rb = affectedObjects[i].attachedRigidbody;
-			if(rb)
-			{
-				rb.AddExplosionForce(explosionForce, transform.position, explosionRadius, 1, ForceMode.Impulse);
-			}
-		}
+			DealDamage(affectedObjects[i]);
+			AddForceToObject(affectedObjects[i]);
+        }
 	}
+
+	private void DealDamage(Collider victim)
+	{
+		Health health = victim.GetComponent<Health>();
+		if(health != null)
+		{
+			health.TakeDamage(damage);
+        }
+    }
+
+	private void AddForceToObject(Collider affectedObject)
+	{
+		Rigidbody rb = affectedObject.attachedRigidbody;
+		if(rb)
+		{
+			rb.AddExplosionForce(explosionForce, transform.position, explosionRadius, 1, ForceMode.Impulse);
+        }
+    }
 }
