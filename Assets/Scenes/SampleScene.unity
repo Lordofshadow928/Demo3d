@@ -273,6 +273,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+--- !u!1 &653831918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 653831920}
+  - component: {fileID: 653831919}
+  m_Layer: 0
+  m_Name: HitEffectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &653831919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653831918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8750fc0317f180141b2dc6a9405aa5c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectMap:
+  - surfaceType: 0
+    hitEffectPrefab: {fileID: 4660052384168724618, guid: a99c9a82edfd8284c931e707abd555da, type: 3}
+  - surfaceType: 1
+    hitEffectPrefab: {fileID: 8197461736576411285, guid: cf258c552c015564ea8f71718ae3824d, type: 3}
+--- !u!4 &653831920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653831918}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.38678, y: 2.1503193, z: -6.9958835}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,3 +1440,4 @@ SceneRoots:
   - {fileID: 2109657594}
   - {fileID: 1564474866}
   - {fileID: 631495349}
+  - {fileID: 653831920}
