@@ -11,10 +11,16 @@ public enum HitSurfaceType
 [System.Serializable]
 public class HitEffectMapper
 {
-    public HitSurfaceType surfaceType;
+    public HitSurfaceType surface;
     public GameObject hitEffectPrefab;
 }
-public class HitEffectManager : MonoBehaviour
+public class HitEffectManager : Singleton<HitEffectManager>
 {
     public HitEffectMapper[] effectMap;
+
+    public GameObject GetEffectPrefab(HitSurfaceType surfaceType)
+    {
+        HitEffectMapper mapper = System.Array.Find(effectMap, x => x.surface == surfaceType);
+        return mapper?.hitEffectPrefab;
+    }
 }
