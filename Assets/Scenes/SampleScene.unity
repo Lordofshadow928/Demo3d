@@ -269,6 +269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie1 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5497674212891138842, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: playerFoot
+      value: 
+      objectReference: {fileID: 867156341}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1056,6 +1060,7 @@ GameObject:
   - component: {fileID: 2109657591}
   - component: {fileID: 2109657595}
   - component: {fileID: 2109657596}
+  - component: {fileID: 2109657597}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1189,6 +1194,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surfaceType: 0
+--- !u!208 &2109657597
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109657590}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &142127459494170684
 PrefabInstance:
   m_ObjectHideFlags: 0
