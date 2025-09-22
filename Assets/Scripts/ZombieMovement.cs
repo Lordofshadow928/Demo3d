@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class ZombieMovement : MonoBehaviour
 {
@@ -9,20 +10,41 @@ public class ZombieMovement : MonoBehaviour
     public Animator anim;
     public NavMeshAgent agent;
     public float reachingRadius;
+    public UnityEvent onDestinationReached;
+    public UnityEvent onStartMoving;
 
-    private void Update()
+    private bool _isMovingValue;
+    public bool IsMoving
     {
-        float distanceToPlayer = Vector3.Distance(transform.position, playerFoot.position);
-        if (distanceToPlayer > reachingRadius)
+        get => _isMovingValue;
+        private set
         {
-            anim.SetBool("isWalk", true);
-            agent.isStopped = false;
-            agent.SetDestination(playerFoot.position);
+            if (_isMovingValue == value) return;
+            _isMovingValue = value;
+            OnIsMovingValueChanged();
+        }
+    }
+
+    private void OnIsMovingValueChanged()
+    {
+        agent.isStopped = !_isMovingValue;
+        anim.SetBool("isWalk", _isMovingValue);
+        if (_isMovingValue)
+        {
+            onStartMoving.Invoke();
         }
         else
         {
-            anim.SetBool("isWalk", false);
-            agent.isStopped = true;
+            onDestinationReached.Invoke();
+        }
+    }
+    private void Update()
+    {
+        float distanceToPlayer = Vector3.Distance(transform.position, playerFoot.position);
+        IsMoving = distanceToPlayer > reachingRadius;
+        if (IsMoving)
+        {
+            agent.SetDestination(playerFoot.position);
         }
     }
 

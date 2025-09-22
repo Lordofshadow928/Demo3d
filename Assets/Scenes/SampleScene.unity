@@ -167,63 +167,50 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4824746529973397896, guid: 82632850ab35aaf48a5870871268eb43, type: 3}
   m_PrefabInstance: {fileID: 2610283850875182653}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &252965310
-PrefabInstance:
+--- !u!1 &344815548
+GameObject:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 344815550}
+  - component: {fileID: 344815549}
+  m_Layer: 0
+  m_Name: GameFlow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &344815549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344815548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e571f73719069fd4ea6bd150f88669e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &344815550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344815548}
   serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4493914613880827488, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-      propertyPath: m_Name
-      value: Zombie1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.34932724, y: 3.3617127, z: 26.74319}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &368735153 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5829668804154733486, guid: 19eac76399251da408bf58eea600d056, type: 3}
@@ -326,18 +313,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie1 Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 4083082719392894691, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5497674212891138842, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
       propertyPath: playerFoot
       value: 
       objectReference: {fileID: 867156341}
-    - target: {fileID: 6952251608678879626, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 7902968691388650671, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 764572945}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -503,6 +486,7 @@ GameObject:
   - component: {fileID: 764572937}
   - component: {fileID: 764572936}
   - component: {fileID: 764572944}
+  - component: {fileID: 764572945}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -698,6 +682,34 @@ MonoBehaviour:
   guns:
   - {fileID: 189306217}
   - {fileID: 567553648}
+--- !u!114 &764572945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764572935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae1bc5654ff02e941b10d54e261ec7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoint: 5
+  onDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 344815549}
+        m_TargetAssemblyTypeName: GameFlow, Assembly-CSharp
+        m_MethodName: OnPlayerDied
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &816218616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5314003213449212722, guid: 82632850ab35aaf48a5870871268eb43, type: 3}
@@ -1235,9 +1247,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AgentTypeID: 0
   m_StartPoint: {x: 0, y: 0, z: -2.5}
-  m_EndPoint: {x: -4.8372774, y: -5.336644, z: 11.765228}
+  m_EndPoint: {x: -4.837281, y: -6.2984195, z: 11.765228}
   m_Width: 0
-  m_CostModifier: -1
+  m_CostModifier: -10
   m_Bidirectional: 0
   m_AutoUpdatePosition: 0
   m_Area: 2
@@ -1830,4 +1842,4 @@ SceneRoots:
   - {fileID: 1564474866}
   - {fileID: 631495349}
   - {fileID: 653831920}
-  - {fileID: 252965310}
+  - {fileID: 344815550}
