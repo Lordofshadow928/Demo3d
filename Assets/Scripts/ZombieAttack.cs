@@ -25,11 +25,11 @@ public class ZombieAttack : MonoBehaviour
         playerHealth.TakeDamage(damage);
         if (index == 1)
         {
-            Player.Instance.playerUI.ShowLeftScratch();
+            Player.Instance.playerUi.ShowLeftScratch();
         }
         else
         {
-            Player.Instance.playerUI.ShowRightScratch();
+            Player.Instance.playerUi.ShowRightScratch();
         }
     }
 }
