@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 428380049}
   - component: {fileID: 428380048}
   - component: {fileID: 428380050}
+  - component: {fileID: 428380052}
   - component: {fileID: 428380051}
   m_Layer: 5
   m_Name: ScratchRight
@@ -320,7 +321,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47be6af18dfc7f344b46d6afe25cc5df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerUi: {fileID: 0}
+  playerUi: {fileID: 428380052}
+--- !u!114 &428380052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428380046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a823010f1b96042aa0af68d19f566c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftScratch: {fileID: 2134536376}
+  rightScratch: {fileID: 428380050}
 --- !u!1 &447916468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,6 +1653,7 @@ GameObject:
   - component: {fileID: 2134536375}
   - component: {fileID: 2134536374}
   - component: {fileID: 2134536376}
+  - component: {fileID: 2134536378}
   - component: {fileID: 2134536377}
   m_Layer: 5
   m_Name: ScratchLeft
@@ -1730,7 +1746,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47be6af18dfc7f344b46d6afe25cc5df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerUi: {fileID: 0}
+  playerUi: {fileID: 2134536378}
+--- !u!114 &2134536378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134536372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a823010f1b96042aa0af68d19f566c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftScratch: {fileID: 428380050}
+  rightScratch: {fileID: 2134536376}
 --- !u!1001 &142127459494170684
 PrefabInstance:
   m_ObjectHideFlags: 0
