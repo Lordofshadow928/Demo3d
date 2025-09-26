@@ -11,6 +11,13 @@ public class AutoFade : MonoBehaviour
 
     private float startTime;
 
+    public void Awake()
+    {
+        image = GetComponent<Image>();
+        SetAlpha(0f);
+        gameObject.SetActive(false);
+    }
+
     public void Show()
     {
         startTime = Time.time;
