@@ -23,13 +23,13 @@ public class ZombieAttack : MonoBehaviour
     {
         Debug.Log("Player takes damage");
         playerHealth.TakeDamage(damage);
-        if (index == 1)
-        {
-            Player.Instance.playerUi.ShowLeftScratch();
-        }
-        else
-        {
-            Player.Instance.playerUi.ShowRightScratch();
-        }
+        //if (index == 1)
+        //{
+        //    Player.Instance.playerUi.ShowLeftScratch();
+        //}
+        //else
+        //{
+        //    Player.Instance.playerUi.ShowRightScratch();
+        //}
     }
 }
