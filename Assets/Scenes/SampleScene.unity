@@ -601,15 +601,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5.9
       objectReference: {fileID: 0}
     - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.27
+      value: 17.9
       objectReference: {fileID: 0}
     - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
       propertyPath: m_LocalRotation.w
@@ -647,26 +647,14 @@ PrefabInstance:
       propertyPath: playerFoot
       value: 
       objectReference: {fileID: 867156341}
-    - target: {fileID: 5497674212891138842, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: onStartMoving.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1999470815}
-    - target: {fileID: 5497674212891138842, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: onDestinationReached.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1999470815}
-    - target: {fileID: 7902968691388650671, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+    - target: {fileID: 6485959865130726049, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 764572945}
-    m_RemovedComponents:
-    - {fileID: 7902968691388650671, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4083082719392894691, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1999470825}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
 --- !u!1 &653831918
 GameObject:
@@ -1826,31 +1814,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1999470815 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4083082719392894691, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-  m_PrefabInstance: {fileID: 631495349}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1999470823 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6952251608678879626, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-  m_PrefabInstance: {fileID: 631495349}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1999470825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1999470815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5292a825adf15fc418d42463c109ea43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 1999470823}
-  damage: 1
-  playerHealth: {fileID: 764572945}
 --- !u!1 &2083422599
 GameObject:
   m_ObjectHideFlags: 0
