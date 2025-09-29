@@ -8,6 +8,7 @@ public class AutoFade : MonoBehaviour
     public float visibleDuration;
     public float fadingDuration;
     public Image image;
+    public CanvasGroup group;
 
     private float startTime;
 
@@ -21,7 +22,7 @@ public class AutoFade : MonoBehaviour
     public void Show()
     {
         startTime = Time.time;
-        SetAlpha(1f);
+        group.alpha = 1f;
         gameObject.SetActive(true);
     }
 
@@ -33,7 +34,7 @@ public class AutoFade : MonoBehaviour
         elapsedTime -= visibleDuration;
         if (elapsedTime < fadingDuration)
         {
-            SetAlpha(1f - elapsedTime / fadingDuration);
+            group.alpha = 1f - elapsedTime / fadingDuration;
         }
         else
         {

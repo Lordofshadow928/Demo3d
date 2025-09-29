@@ -48,4 +48,10 @@ public class ZombieMovement : MonoBehaviour
         }
     }
 
+    public void OnDie()
+    {
+        enabled = false;
+        agent.isStopped = true;
+    }
+
 }
