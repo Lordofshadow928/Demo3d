@@ -294,7 +294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -294}
+  m_AnchoredPosition: {x: 0, y: -164}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &309422211
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Menu
+  m_text: Quit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -975,71 +975,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3320869556789868118, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
   m_PrefabInstance: {fileID: 1368849893}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &631495349
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 17.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1076747069699783920, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083082719392894691, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: m_Name
-      value: Zombie1 Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 5497674212891138842, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: playerFoot
-      value: 
-      objectReference: {fileID: 867156341}
-    - target: {fileID: 6485959865130726049, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-      propertyPath: playerHealth
-      value: 
-      objectReference: {fileID: 764572945}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
 --- !u!1 &653831918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,7 +1346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae1bc5654ff02e941b10d54e261ec7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoint: 20
+  maxHealthPoint: 10
   onDie:
     m_PersistentCalls:
       m_Calls:
@@ -1460,6 +1395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerUi: {fileID: 764572946}
+  playerFoot: {fileID: 867156341}
 --- !u!4 &816218616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5314003213449212722, guid: 82632850ab35aaf48a5870871268eb43, type: 3}
@@ -1661,6 +1597,54 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: ffa8793744880814393ddb1bd74038fc, type: 2}
   m_BuildHeightMesh: 0
+--- !u!1 &1125767107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1125767109}
+  - component: {fileID: 1125767108}
+  m_Layer: 0
+  m_Name: ZombieSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1125767108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125767107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f06da76970f873248a930a00945d2ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombiePrefab: {fileID: 4083082719392894691, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+  radius: 3
+  spawnCount: 2
+  spawnInterval: 5
+--- !u!4 &1125767109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125767107}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 13.34}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1146225560
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,7 +2411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1955221323
 Transform:
   m_ObjectHideFlags: 0
@@ -3136,10 +3120,10 @@ SceneRoots:
   - {fileID: 447916469}
   - {fileID: 2109657594}
   - {fileID: 1564474866}
-  - {fileID: 631495349}
   - {fileID: 653831920}
   - {fileID: 344815550}
   - {fileID: 1604531760}
   - {fileID: 1500889450}
   - {fileID: 450066740}
   - {fileID: 1955221323}
+  - {fileID: 1125767109}
