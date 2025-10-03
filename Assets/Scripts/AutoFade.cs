@@ -1,27 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 
 public class AutoFade : MonoBehaviour
 {
     public float visibleDuration;
     public float fadingDuration;
-    public Image image;
+    public CanvasGroup group;
 
     private float startTime;
 
-    public void Awake()
-    {
-        image = GetComponent<Image>();
-        SetAlpha(0f);
-        gameObject.SetActive(false);
-    }
+    //public void Awake()
+    //{
+    //    image = GetComponent<Image>();
+    //    SetAlpha(0f);
+    //    gameObject.SetActive(false);
+    //}
 
     public void Show()
     {
         startTime = Time.time;
-        SetAlpha(1f);
+        group.alpha = 1f;
         gameObject.SetActive(true);
     }
 
@@ -33,7 +31,7 @@ public class AutoFade : MonoBehaviour
         elapsedTime -= visibleDuration;
         if (elapsedTime < fadingDuration)
         {
-            SetAlpha(1f - elapsedTime / fadingDuration);
+            group.alpha = 1f - elapsedTime / fadingDuration;
         }
         else
         {
@@ -41,20 +39,20 @@ public class AutoFade : MonoBehaviour
         }
     }
 
-    private void SetAlpha(float alpha)
-    {
-        Color newColor = image.color;
-        newColor.a = alpha;
-        image.color = newColor;
-    }
+    //private void SetAlpha(float alpha)
+    //{
+    //    Color newColor = image.color;
+    //    newColor.a = alpha;
+    //    image.color = newColor;
+    //}
 
     public void Hide()
     {
         gameObject.SetActive(false);
     }
 
-    public void OnValidate()
-    {
-        image = GetComponent<Image>();
-    }
+    //public void OnValidate()
+    //{
+    //    image = GetComponent<Image>();
+    //}
 }
