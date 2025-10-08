@@ -1,0 +1,43 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class AsyncSceneLoader : MonoBehaviour
+{
+    public ProgressBar progress;
+    public string sceneName;
+    public float fakeDuration;
+
+    private AsyncOperation loadingOperation;
+    private float startTime;
+
+    public void StartLoadScene()
+    {
+        gameObject.SetActive(true);
+        DontDestroyOnLoad(this);
+        startTime = Time.unscaledTime;
+        loadingOperation = SceneManager.LoadSceneAsync(sceneName);
+        Time.timeScale = 0f;
+    }
+
+    private void Update()
+    {
+        if (loadingOperation != null) return;
+        float fakeProgress = (Time.unscaledTime - startTime) / fakeDuration;
+
+        float finalProgress = Mathf.Min(fakeProgress, loadingOperation.progress);
+        progress.SetProgressValue(finalProgress);
+
+        if (finalProgress >= 1f && loadingOperation.isDone)
+        {
+            FinishLoading();
+        }
+    }
+
+    private void FinishLoading()
+    {
+        Time.timeScale = 1f;
+        Destroy(gameObject);
+    }
+}
