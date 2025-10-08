@@ -18,18 +18,18 @@ public class AsyncSceneLoader : MonoBehaviour
         DontDestroyOnLoad(this);
         startTime = Time.unscaledTime;
         loadingOperation = SceneManager.LoadSceneAsync(sceneName);
-        Time.timeScale = 0f;
+        Time.timeScale = 0;
     }
 
     private void Update()
     {
-        if (loadingOperation != null) return;
+        if (loadingOperation == null) return;
         float fakeProgress = (Time.unscaledTime - startTime) / fakeDuration;
 
         float finalProgress = Mathf.Min(fakeProgress, loadingOperation.progress);
         progress.SetProgressValue(finalProgress);
 
-        if (finalProgress >= 1f && loadingOperation.isDone)
+        if (loadingOperation.isDone && finalProgress >= 1f)
         {
             FinishLoading();
         }
@@ -37,7 +37,7 @@ public class AsyncSceneLoader : MonoBehaviour
 
     private void FinishLoading()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 1;
         Destroy(gameObject);
     }
 }

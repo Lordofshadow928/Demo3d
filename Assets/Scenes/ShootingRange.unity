@@ -1862,12 +1862,12 @@ GameObject:
   - component: {fileID: 1448636852}
   - component: {fileID: 1448636856}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: GameOverCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1448636852
 MonoBehaviour:
   m_ObjectHideFlags: 0
