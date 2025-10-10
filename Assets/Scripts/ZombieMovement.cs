@@ -38,6 +38,11 @@ public class ZombieMovement : MonoBehaviour
             onDestinationReached.Invoke();
         }
     }
+
+    private void Start()
+    {
+        playerFoot = Player.Instance.playerFoot;
+    }
     private void Update()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, playerFoot.position);
