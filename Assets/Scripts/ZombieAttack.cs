@@ -19,6 +19,10 @@ public class ZombieAttack : MonoBehaviour
         anim.SetBool("isAttack", false);
     }
 
+    private void Start()
+    {
+        playerHealth = Player.Instance.health;
+    }
     public void OnAttack(int index)
     {
         Debug.Log("Player takes damage");

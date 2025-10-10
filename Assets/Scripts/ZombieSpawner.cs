@@ -9,6 +9,12 @@ public class ZombieSpawner : MonoBehaviour
     public int spawnQuantity;
     public float spawnInterval;
     public float radius;
+
+#if Unity_Editor
+using UnityEditor;
+#endif
+
+#if Unity_Editor
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -20,6 +26,8 @@ public class ZombieSpawner : MonoBehaviour
         Handles.color = new Color(1, 0, 0, 0.1f);
         Handles.DrawSolidDisc(transform.position, Vector3.up, radius);
     }
+#endif
+
     private void Start()
     {
         StartCoroutine(SpawnZombiesByTimes());

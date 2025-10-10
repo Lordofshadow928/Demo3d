@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c15cb692e38af7478feb138ed69041f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 2458360394027779342}
+  health: {fileID: 0}
   healthValue: {fileID: 104725538601560670}
 --- !u!114 &4442450036103406851
 MonoBehaviour:
@@ -394,9 +394,6 @@ PrefabInstance:
       addedObject: {fileID: 4917851058600895134}
     - targetCorrespondingSourceObject: {fileID: 4493914613880827488, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2458360394027779342}
-    - targetCorrespondingSourceObject: {fileID: 4493914613880827488, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2808504166930627792}
     - targetCorrespondingSourceObject: {fileID: 4493914613880827488, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       insertIndex: -1
@@ -410,6 +407,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4493914613880827488, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6485959865130726049}
+    - targetCorrespondingSourceObject: {fileID: 4493914613880827488, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1317415354187379175}
     - targetCorrespondingSourceObject: {fileID: 1836615893786013965, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5184195050479032304}
@@ -1298,64 +1298,6 @@ CapsuleCollider:
   m_Height: 2.3475275
   m_Direction: 1
   m_Center: {x: -0.0072705746, y: 0.67376375, z: 0}
---- !u!114 &2458360394027779342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4083082719392894691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae1bc5654ff02e941b10d54e261ec7a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealthPoint: 10
-  onDie:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2808504166930627792}
-        m_TargetAssemblyTypeName: RagdollSwitcher, Assembly-CSharp
-        m_MethodName: EnableRagdoll
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5497674212891138842}
-        m_TargetAssemblyTypeName: ZombieMovement, Assembly-CSharp
-        m_MethodName: OnDie
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onHealthChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  onTakeDamage:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2378767357746032114}
-        m_TargetAssemblyTypeName: AutoFade, Assembly-CSharp
-        m_MethodName: Show
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &2808504166930627792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1466,6 +1408,64 @@ MonoBehaviour:
   anim: {fileID: 6952251608678879626}
   damage: 1
   playerHealth: {fileID: 0}
+--- !u!114 &1317415354187379175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4083082719392894691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8def34861b2154b975f1038bef7ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoint: 10
+  onDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2808504166930627792}
+        m_TargetAssemblyTypeName: RagdollSwitcher, Assembly-CSharp
+        m_MethodName: EnableRagdoll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5497674212891138842}
+        m_TargetAssemblyTypeName: ZombieMovement, Assembly-CSharp
+        m_MethodName: OnDie
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onTakeDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2378767357746032114}
+        m_TargetAssemblyTypeName: AutoFade, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5340403837624893764 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5542661683521872327, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
