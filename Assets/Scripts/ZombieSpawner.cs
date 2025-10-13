@@ -10,11 +10,11 @@ public class ZombieSpawner : MonoBehaviour
     public float spawnInterval;
     public float radius;
 
-#if Unity_Editor
-using UnityEditor;
-#endif
+//#if Unity_Editor
+//using UnityEditor;
+//#endif
 
-#if Unity_Editor
+//#if Unity_Editor
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -23,10 +23,10 @@ using UnityEditor;
 
     private void OnDrawGizmosSelected()
     {
-        Handles.color = new Color(1, 0, 0, 0.1f);
+        Handles.color = new Color(1, 0, 0, 0.9f);
         Handles.DrawSolidDisc(transform.position, Vector3.up, radius);
     }
-#endif
+//#endif
 
     private void Start()
     {
