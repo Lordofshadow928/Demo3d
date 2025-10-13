@@ -10,8 +10,10 @@ public class MissionManager : Singleton<MissionManager>
     public TMP_Text missionText;
     public Transform exitDoor;
     public Transform playerFoot;
+    public Gate gate;
 
     private int currentKill;
+    private bool isPlayerExit;
 
     private void Start()
     {
@@ -35,7 +37,9 @@ public class MissionManager : Singleton<MissionManager>
     private IEnumerator VerifyPlayerExit()
     {
         missionText.text = $"Find exit door";
-        yield return new WaitUntil(IsPlayerExit);
+        gate.onPlayerEnter.AddListener(OnPlayerExit);
+        yield return new WaitUntil(() => isPlayerExit);
+        gate.onPlayerEnter.RemoveListener(OnPlayerExit);
     }
 
     public void OnZombieKilled(GameObject zombie)
@@ -45,9 +49,9 @@ public class MissionManager : Singleton<MissionManager>
         Debug.Log($"OnZombieKilled: {currentKill}");
     }
 
-    private bool IsPlayerExit()
+    private void OnPlayerExit()
     {
-        float distance = Vector3.Distance(playerFoot.position, exitDoor.position);
-        return distance < 1.5f;
+        isPlayerExit = true;
     }
+    
 }
