@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class MoveByVJoystick : MonoBehaviour
 {
     public CharacterController controller;
-    public float moveSpeed = 10f;
+    public float movingSpeed = 10f;
+    public Joystick joystick;
 
     private void CanMove()
     {
@@ -14,10 +15,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        float hInput = Input.GetAxis("Horizontal");
-        float vInput = Input.GetAxis("Vertical");
+        float hInput = joystick.Horizontal;
+        float vInput = joystick.Vertical;
         Vector3 direction = transform.right * hInput + transform.forward * vInput;
-        controller.SimpleMove(direction * moveSpeed);
+        controller.SimpleMove(direction * movingSpeed);
     }
-
 }
