@@ -42,23 +42,23 @@ public class GunAmmo : MonoBehaviour
 
 	private void LockShooting()
 	{
-		shooting.enabled = false;
+		shooting.isLocked = true;
 	}
 
 	private void UnlockShooting()
 	{
-		shooting.enabled = true;
+		shooting.isLocked = false;
 	}
 
-	private void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.R))
-		{
-			Reload();
-        }
-    }
+	//private void Update()
+	//{
+	//	if (Input.GetKeyDown(KeyCode.R))
+	//	{
+	//		Reload();
+ //       }
+ //   }
 
-	private void Reload()
+	public void Reload()
 	{
 		anim.SetTrigger("Reload");
 		LockShooting();

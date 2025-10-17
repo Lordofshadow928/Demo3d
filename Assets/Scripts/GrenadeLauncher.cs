@@ -12,14 +12,22 @@ public class GrenadeLauncher : Shooting
     public Animator anim;
     public GunAmmo gunAmmo;
 
-    void Update()
+    //   void Update()
+    //   {
+    //       if (Input.GetMouseButtonDown(leftMouseButton))
+    //       {
+    //           Debug.Log("Bullet Fired");
+    //           ShootBullet();
+    //       }
+    //}
+
+    public void Shoot()
     {
-        if (Input.GetMouseButtonDown(leftMouseButton))
+        if(!isLocked)
         {
-            Debug.Log("Bullet Fired");
             ShootBullet();
         }
-	}
+    }
 
     private void ShootBullet()
     {

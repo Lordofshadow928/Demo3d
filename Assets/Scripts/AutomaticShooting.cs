@@ -13,17 +13,28 @@ public class AutomaticShooting : Shooting
 
     private float lastShot;
     private float interval;
+    private bool isShooting;
 
     private void Start()
     {
         interval = 60f / rpm;
     }
 
+    public void StartShooting()
+    {
+        isShooting = true;
+    }
+
+    public void StopShooting()
+    {
+        isShooting = false;
+    }
+
     private void Update()
     {
-        if(Input.GetMouseButton(0))
+        if(isShooting)
         {
-            Debug.Log("Automatic Shooting");
+            //Debug.Log("Automatic Shooting");
             UpdateFiring();
             gunAmmo.SingleFireAmmoCounter();
         }
