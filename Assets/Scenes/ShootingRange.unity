@@ -1296,7 +1296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 764572938}
-  movingSpeed: 20
+  movingSpeed: 10
   joystick: {fileID: 5870602789794219034}
 --- !u!225 &798774310 stripped
 CanvasGroup:
@@ -1443,7 +1443,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &905825586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1654,6 +1654,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1018448418}
   - component: {fileID: 1018448419}
+  - component: {fileID: 1018448420}
   m_Layer: 0
   m_Name: ZombieSpawner
   m_TagString: Untagged
@@ -1673,7 +1674,8 @@ Transform:
   m_LocalPosition: {x: 17.590027, y: 0.5700073, z: 21.510002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1986938838}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1018448419
@@ -1689,9 +1691,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ZombiePrefab: {fileID: 4083082719392894691, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
-  spawnQuantity: 2
+  spawnQuantity: 3
   spawnInterval: 5
-  radius: 5
+  spawnPoint: {fileID: 1986938838}
+--- !u!65 &1018448420
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018448417}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.473715, y: 1, z: 6.805649}
+  m_Center: {x: 2.7368574, y: 0, z: 2.9028244}
 --- !u!1 &1023076036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,6 +1829,10 @@ PrefabInstance:
     - target: {fileID: 4083082719392894691, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
       propertyPath: m_Name
       value: Zombie1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083082719392894691, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5497674212891138842, guid: 1ee11973c6ab3c94cbf413b7692b6525, type: 3}
       propertyPath: playerFoot
@@ -2077,6 +2104,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 12858662}
     m_Modifications:
+    - target: {fileID: 1484642034523987317, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
+      propertyPath: rpm
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 1751126871196075077, guid: f0a4c30a45d8abd4fa6627bff4c69d7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.48
@@ -3040,7 +3071,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1884087471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3336,6 +3367,37 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1986938837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1986938838}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1986938838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986938837}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1018448418}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1992440325
 GameObject:
   m_ObjectHideFlags: 0

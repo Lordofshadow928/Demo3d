@@ -8,8 +8,10 @@ public class ZombieSpawner : MonoBehaviour
     public GameObject ZombiePrefab;
     public int spawnQuantity;
     public float spawnInterval;
-    public float radius;
+    public Transform spawnPoint;
 
+
+    private bool isRunning;
 #if Unity_Editor
 using UnityEditor;
 #endif
@@ -20,17 +22,25 @@ using UnityEditor;
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(transform.position, 0.2f);
     }
-
-    private void OnDrawGizmosSelected()
-    {
-        Handles.color = new Color(1, 0, 0, 0.9f);
-        Handles.DrawSolidDisc(transform.position, Vector3.up, radius);
-    }
 #endif
 
-    private void Start()
+
+    private void OnTriggerEnter(Collider other)
     {
-        StartCoroutine(SpawnZombiesByTimes());
+        if(!isRunning && other.CompareTag("Player"))
+        {
+            isRunning = true;
+            StartCoroutine(SpawnZombiesByTimes());
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (isRunning && other.CompareTag("Player"))
+        {
+            isRunning = false;
+            StopAllCoroutines();
+        }
     }
 
     private IEnumerator SpawnZombiesByTimes()
@@ -47,4 +57,6 @@ using UnityEditor;
         Instantiate(ZombiePrefab, transform.position, transform.rotation);
         spawnQuantity--;
     }
+
+
 }

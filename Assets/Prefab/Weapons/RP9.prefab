@@ -1216,7 +1216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 8558883684161956159}
-  rpm: 100
+  rpm: 30
   onShoot:
     m_PersistentCalls:
       m_Calls:
@@ -1271,7 +1271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3e3c01c71db9534b9905372054d74a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoCount: 30
+  ammoCount: 1000
   shooting: {fileID: 1484642034523987317}
   anim: {fileID: 8558883684161956159}
   reloadSounds: {fileID: 0}
