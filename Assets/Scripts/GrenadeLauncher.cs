@@ -21,6 +21,13 @@ public class GrenadeLauncher : Shooting
     //       }
     //}
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Shoot();
+        }
+    }
     public void Shoot()
     {
         if(!isLocked)
