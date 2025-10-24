@@ -50,13 +50,13 @@ public class GunAmmo : MonoBehaviour
 		shooting.isLocked = false;
 	}
 
-	//private void Update()
-	//{
-	//	if (Input.GetKeyDown(KeyCode.R))
-	//	{
-	//		Reload();
- //       }
- //   }
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.R))
+		{
+			Reload();
+		}
+	}
 
 	public void Reload()
 	{

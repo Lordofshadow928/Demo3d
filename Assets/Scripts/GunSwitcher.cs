@@ -7,15 +7,19 @@ public class GunSwitcher : MonoBehaviour
     public GameObject[] guns;
     private int currentIndex;
 
+    private void Update()
+    {
+        for(int i = 0; i < guns.Length; i++)
+        {
+            if(Input.GetKeyDown(KeyCode.Keypad1 + i) || Input.GetKeyDown(KeyCode.Alpha1 + i))
+            {
+                SetActiveGun(i);
+            }
+        }
+    }
+
     public void SwitchGun()
     {
-        //for (int i = 0; i < guns.Length; i++)
-        //{
-        //    if (Input.GetKeyDown(KeyCode.Keypad1 + i) || Input.GetKeyDown(KeyCode.Alpha1 + i))
-        //    {
-        //        SetActiveGun(i);
-        //    }
-        //}
         currentIndex = (currentIndex + 1) % guns.Length;
         SetActiveGun(currentIndex);
 

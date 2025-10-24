@@ -32,15 +32,13 @@ public class AutomaticShooting : Shooting
 
     private void Update()
     {
-        if (isShooting)
+        //Debug.Log("Automatic Shooting");
+        if (isShooting || Input.GetKey(KeyCode.Mouse0))
         {
-            //Debug.Log("Automatic Shooting");
-            if (isShooting || Input.GetKey(KeyCode.Mouse0))
-            {
-                UpdateFiring();
-                gunAmmo.SingleFireAmmoCounter();
-            }
+            UpdateFiring();
+            gunAmmo.SingleFireAmmoCounter();
         }
+
     }
 
     private void UpdateFiring()
