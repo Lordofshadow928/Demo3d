@@ -6,15 +6,15 @@ using UnityEngine;
 public class FollowObject : MonoBehaviour
 {
     public Transform target;
-
-    private Vector3 offset;
-
-    private void Start()
-    {
-        offset = transform.position - target.position;
-    }
+    public Vector3 offset;
 
     private void LateUpdate()
+    {
+        Relocate();
+    }
+
+    [ContextMenu("Relocate")]
+    public void Relocate()
     {
         transform.position = target.position + offset;
     }
