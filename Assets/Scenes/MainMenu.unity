@@ -725,7 +725,6 @@ GameObject:
   - component: {fileID: 1453877662}
   - component: {fileID: 1453877661}
   - component: {fileID: 1453877660}
-  - component: {fileID: 1453877664}
   m_Layer: 5
   m_Name: Loading Canvas
   m_TagString: Untagged
@@ -817,21 +816,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1453877664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453877659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c2049c0ee849ad45bed90441d5e4d08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  progress: {fileID: 1687041246}
-  sceneName: ShootingRange
-  fakeDuration: 3
 --- !u!1 &1687041242
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,7 +827,6 @@ GameObject:
   - component: {fileID: 1687041243}
   - component: {fileID: 1687041245}
   - component: {fileID: 1687041244}
-  - component: {fileID: 1687041246}
   m_Layer: 5
   m_Name: LoadingBar
   m_TagString: Untagged
@@ -909,21 +892,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687041242}
   m_CullTransparentMesh: 1
---- !u!114 &1687041246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687041242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76042f1a9694519408db7c81a3ff626e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rectTransform: {fileID: 1687041243}
-  mask: {fileID: 1324010395}
-  progressImage: {fileID: 1209534833}
 --- !u!1 &1933542582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +975,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1453877664}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ASyncSceneLoader, Assembly-CSharp
         m_MethodName: StartLoadScene
         m_Mode: 1
@@ -1219,8 +1187,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ZOMBIE DEMO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0048e9a72c1f7f14b8ae8c2fdae0fc3e, type: 2}
-  m_sharedMaterial: {fileID: 5165841842918662167, guid: 0048e9a72c1f7f14b8ae8c2fdae0fc3e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
