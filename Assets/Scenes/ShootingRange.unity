@@ -2020,6 +2020,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 162809737573419341, guid: f4f271589766bfb4c934d11b04c5a763, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414004837914843928, guid: f4f271589766bfb4c934d11b04c5a763, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2468719586023884867, guid: f4f271589766bfb4c934d11b04c5a763, type: 3}
       propertyPath: group
       value: 
@@ -2028,6 +2036,14 @@ PrefabInstance:
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 344815549}
+    - target: {fileID: 4079742202046176675, guid: f4f271589766bfb4c934d11b04c5a763, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5340509489009576448, guid: f4f271589766bfb4c934d11b04c5a763, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8020154078750502743, guid: f4f271589766bfb4c934d11b04c5a763, type: 3}
       propertyPath: m_Name
       value: PlayerCapsule
